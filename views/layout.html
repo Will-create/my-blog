@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>Louis Bertson Nabaloum</title>
+        <meta name="description"
+        content="Louis Bertson Nabaloum is a self-taught Software Developper, Pianist, Bass Guitarist and Song Writer from Burkina Faso / West Africa">
+    <meta name="keywords"
+        content="Louis Bertson, Nabaloum Louis, Louis Bertson Nabaloum, Louis Nabaloum, Bertson World, Bertson Universe, The Happy Developper, Happy developper,">
+        <meta charset="utf-8">
+        <meta property="og:title" content="Louis Bertson | @(The Happy Software Developer)" />
+        <meta name="description" content="Louis Bertson | @(Welcome to Bertson World, wolcome my universe and welcome the blog of the happy developer)">
+        <meta property="og:url" content="https://www.louisbertson.com" />
+        <meta property="og:type" content="blog" />
+        <meta property="og:image" content="https://www.louisbertson.com/images/images.jpg"/>
+        <meta property="og:copyright" content="Bertson World" />
+        <meta property="og:developer_lead" content="Louis Bertson Nabaloum" />
+        <meta name="author" content="Louis Bertson Nabaloum - contact@louisbertson.com">
+        <meta property="og:site_name" content="louisbertson.com" />
+
+        <meta name="viewport" content="width=device-width, initail-scale=1">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+     <!-- <link rel="stylesheet" href="css/links/pink.css" type="text/css"> -->
+     <!-- Live Style Switcher - Demo Only -->
+     <link rel="stylesheet" class="alternate-style" title="green" href="css/links/green.css" type="text/css" >
+     <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css"> 
+
+
+    </head>
+    <body class="dark">
+        <!-- Preload -->
+        <div class="preloader">
+            <div class="loader">      
+            </div>
+        </div>
+        <!-- Preload End-->
+        <!--main container-->
+        <div class="main-container">
+            <!--Aside-->
+            <div class="aside">
+                <!-- Nav Toggler Btn -->
+                <div data---="scrollbar@1__null" style="background-color:rgba(100,100,100,0.05);height:100vh" class="" data-jc-class="hidden">
+                    <div class="nav-toggler">
+                        <span></span>
+                    </div>
+                    <!--nav-->
+                    <div class="aside-inner">
+
+     
+                          
+                            <div class="logo">
+                                <a href="/">Louis Bertson</a>
+                            </div>
+
+                            <img src="images/gb.svg" onclick="set_lang('en')" width="25px" style="float:left;cursor:pointer;">
+                            <img src="images/fr.svg" onclick="set_lang('fr')" width="25px" style="float:right;cursor:pointer;">
+                            <ul class="nav">
+                            <li> <a href="/" class="active"> <i class="fa fa-home"></i> @(Home) </a></li>
+                            <li> <a href="/about"> <i class="fa fa-user"></i> @(About) </a></li>
+                            <li> <a href="/services"> <i class="fa fa-list"></i> @(Service) </a></li>
+                            <li> <a href="/references"> <i class="fa fa-heart"></i> @(References) </a></li>
+                            <li> <a href="/portfolio"> <i class="fa fa-briefcase"></i>@(Portfolio) </a></li>
+                            <li> <a href="/blog"> <i class="fa fa-envelope"></i> @(Blog) </a></li>
+                            <li> <a href="/contact"> <i class="fa fa-comments"></i> @(Contact) </a></li>
+                            </ul>
+
+                            <!--copyright-->
+                            <div class="copyright-text">
+                                @(All rights reserved) &copy; @{NOW.getFullYear()}
+                                
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+            <div class=" main-content">
+        
+                @{body}
+
+            </div>
+           
+
+
+        </div>
+        <!--main container-->
+        <!-- lightbox -->
+        <div class="lightbox">
+            <div class="lightbox-content">
+                <div class="lightbox-close">
+                    &times;
+                </div>
+                <img src="images/shopping_bag_PNG6369.png" onclick="nextItem()" class="lightbox-img">
+                <div class="lightbox-caption">
+                    <div class="caption-text"></div>
+                     <div class="caption-counter"></div>
+                </div>
+            </div>
+            <div class="lightbox-controls">
+                <div class="prev-item" onclick="prevItem()"><i class="fa fa-angle-left"></i></div>
+                <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
+            </div>
+
+        </div>
+        <!-- lightbox End -->
+        <!-- Live Style Swicher - Demo Only -->
+       
+     <script>
+        window.addEventListener("load",function(){
+            document.querySelector(".preloader").classList.add("opacity-0");
+            
+            setTimeout(() =>{
+                document.querySelector(".preloader").style.display="none";     
+            },1000)
+        
+        });
+
+            // Sside Navbar
+        const nav=document.querySelector(".nav"),
+        navlist=nav.querySelectorAll("li"),
+        totalnavlist=navlist.length,
+        allsection=document.querySelectorAll(".section")
+        totalsection=allsection.length;
+  
+    function addbacksection(num){
+        allsection[num].classList.add("back-section");
+        }
+    function removebacksection(){
+    for(let i=0;i<totalsection;i++){
+        allsection[i].classList.remove("back-section");
+                                    } 
+                            }
+    function showsection(element){
+    // remove class active from all section
+        for(let i=0;i<totalsection;i++){
+        allsection[i].classList.remove("active");
+                                        }
+            const href= element.getAttribute("href").split("#");
+            target=href[1];
+            document.querySelector("#"+target).classList.add("active");           
+                            }
+    // updateNav
+    function updateNav(element){
+    for(let i=0;i<totalnavlist;i++){
+        navlist[i].querySelector("a").classList.remove("active");
+        const target= element.getAttribute("href").split("#")[1];
+        if(target === navlist[i].querySelector("a").getAttribute("href").split("#")[1]){
+            navlist[i].querySelector("a").classList.add("active");
+        }
+    }
+    }
+
+    // nav-toggler
+    const navtogglerBtn=document.querySelector(".nav-toggler"),
+    aside=document.querySelector(".aside"); 
+    navtogglerBtn.addEventListener("click",asideSectionTogglerBtn) 
+    function  asideSectionTogglerBtn(){
+    aside.classList.toggle("open");
+    navtogglerBtn.classList.toggle("open");
+    for(let i=0;i<totalsection;i++){
+        allsection[i].classList.toggle("open");
+    }
+    }   
+
+    function set_lang(lang){
+        let current = window.location.href.substring(window.location.origin.length,window.location.href.length).split('?')[0];
+        console.log(current);
+        if(lang === 'fr'){
+            window.location.href = '/language/fr?current='+current;
+        }else{
+            window.location.href = '/language/en?current='+current;
+        }
+    }
+
+    function read_post(id){
+        var link = `/blog/${id}`;
+        window.location.href = link;
+
+    }
+
+     </script>
+  
+    </body>
+     
+
+</html>

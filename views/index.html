@@ -1,0 +1,24 @@
+        <!-- home section -->
+        <section class="home section active" id="home">
+            <div class="container">
+                <div class="intro">
+                    <img src="images/images.jpg" alt="profile" class="shadow-dark">
+                    <h1>Louis Bertson</h1>
+                    <p>@(I'm the happy developer)</p>
+                    <div class="social-links">
+                        @{ foreach social in model.socials}
+                        <a href="@{social.url}"><i class="fa fa-@{social.icon}"></i> </a>
+
+                        @{end}
+                    </div>
+
+                </div>
+
+            </div>
+           
+        </section>
+
+        <script>
+        </script>
+        <!-- home section End-->
+      
