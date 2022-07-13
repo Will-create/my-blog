@@ -2,64 +2,76 @@
     <div class="container">
     <div class="row">
     <div class="section-title padd-15">
-         <h2>Contact Me</h2>
+         <h2>@(Contact me)</h2>
     </div>
     </div>
     <div class="row">
         <!-- contact-info-item -->
         <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-phone"></i></div>
-            <h4>Call Us On</h4>
-            <p>+91 8800 000 000 </p>
+            <h4>@(Call me on)</h4>
+            <p>+226 53 13 30 10 </p>
         </div>
         <!-- contact-info-item End -->
          <!-- contact-info-item -->
          <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-map-marker"></i></div>
-            <h4>Office</h4>
-            <p>44 Street, New Delhi, India</p>
+            <h4>@(Office)</h4>
+            <p>Tanghin, Ouagadougou / Burkina Faso</p>
         </div>
         <!-- contact-info-item End -->
          <!-- contact-info-item -->
          <div class="contact-info-item padd-15">
             <div class="icon"><i class="fa fa-envelope"></i></div>
-            <h4>Email</h4>
-            <p>info@gmail.com </p>
+            <h4>@(Email)</h4>
+            <p>contact@louisbertson.com </p>
         </div>
         <!-- contact-info-item End -->
     </div>
     <!-- Contact form -->
-    <div class="row">
-        <form class="contact-form padd-15">
+    <div data-scope="contactform" class="row">
+        <form  method="POST" action="/api/contact" onsubmit="return send_message()" class="contact-form padd-15" id="contactform">
             <div class="row">
                 <div class="form-item col-6 padd-15">
                     <div  class="form-group">
-                        <input type="text" class="form-control" placeholder="Name*">
+                        <input type="text" data-bind="?.firstname__text__empty" name="firstname" class="form-control" placeholder="@(Firstname)*">
                     </div>
                 </div>
                 <div class="form-item col-6 padd-15">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email*">
+                        <input type="text" data-bind="?.lastname__text__empty" name="lastname" class="form-control" placeholder="@(Lastname)*">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-item col-6 padd-15">
+                    <div  class="form-group">
+                        <input type="text" data-bind="?.email__text__empty" name="email" class="form-control" placeholder="@(Email)*">
+                    </div>
+                </div>
+                <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                        <input type="text" data-bind="?.phone__text__empty" name="phone" class="form-control" placeholder="@(Number)*">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Subject*">
+                        <input type="text" data-bind="?.subject_text__empty" name="subject" class="form-control" placeholder="@(Subject)*">
                     </div>
                 </div>      
             </div>
             <div class="row">
                 <div class="form-item col-12 padd-15">
                     <div class="form-group">
-                        <textarea  class="form-control" placeholder="Your Message...."></textarea>
+                        <textarea data-bind="?.body__text__empty" name="body" class="form-control" placeholder="@(Your Message....)"></textarea>
                     </div>
                 </div>      
             </div>
             <div class="row">
                 <div class=" col-12 padd-15">
-                    <button type="submit" class="btn">Send Message</button>
+                    <button  class="btn">@(Send Message)</button>
                 </div>      
             </div>
         </form>
@@ -69,3 +81,15 @@
     <!-- Contact form End -->
     </div>
   </section>
+
+  <script>
+   function send_message(){
+    console.log('This is my handler');
+    return false;
+   }
+
+   function post_message(){
+       var form = ;
+   }
+
+  </script>

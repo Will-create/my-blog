@@ -1,6 +1,7 @@
 NEWSCHEMA('ContactForms', function(schema) {
 
 	schema.define('source', 'String(50)');
+	schema.define('subject', 'String(50)');
 	schema.define('name', 'String(60)', true);
 	schema.define('firstname', 'Capitalize(40)', true);
 	schema.define('lastname', 'Capitalize(40)', true);
