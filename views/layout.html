@@ -47,13 +47,9 @@
                     </div>
                     <!--nav-->
                     <div class="aside-inner">
-
-     
-                          
-                            <div class="logo">
+                            <div style="text-align: center;" class="logo">
                                 <a href="/"> LB</a>
                             </div>
-
                             <img src="images/gb.svg" onclick="set_lang('en')" width="25px" style="float:left;cursor:pointer;">
                             <img src="images/fr.svg" onclick="set_lang('fr')" width="25px" style="float:right;cursor:pointer;">
                             <ul class="nav">
@@ -177,6 +173,16 @@
         var link = `/blog/${id}`;
         window.location.href = link;
 
+    }
+
+    function isDay() {
+        return (Date.now() + 60000 * new Date().getTimezoneOffset() + 21600000) % 86400000 / 3600000 > 12;
+    }
+
+    if(isDay){
+        document.querySelector('body').className = "";
+    }else{
+        document.querySelector('body').className = "dark";
     }
 
      </script>
