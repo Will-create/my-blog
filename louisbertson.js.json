@@ -1,0 +1,56 @@
+{
+	"pid": 88798,
+	"date": "2022-07-14T22:05:30.205Z",
+	"port": 8010,
+	"ip": "0.0.0.0",
+	"stats": [
+		{
+			"id": null,
+			"version": {
+				"node": "v14.19.0",
+				"total": "4",
+				"build": 4062,
+				"app": 14
+			},
+			"pid": 88798,
+			"thread": "",
+			"mode": "release",
+			"overload": 0,
+			"date": "2022-07-14T23:17:29.364Z",
+			"textdb": {
+				"size": 0.022,
+				"pendingwrite": 0,
+				"pendingread": 0,
+				"duration": 0,
+				"documents": 28,
+				"reading": 0,
+				"writing": 0
+			},
+			"memory": 13.03,
+			"rm": 0,
+			"fm": 0,
+			"wm": 0,
+			"em": 0,
+			"mm": 0,
+			"om": 0,
+			"dm": 0,
+			"um": 0,
+			"pm": 0,
+			"sm": 0,
+			"cm": 0,
+			"dbrm": 0,
+			"dbwm": 0,
+			"usage": 0,
+			"requests": 393,
+			"pending": 0,
+			"external": 0,
+			"errors": 2,
+			"timeouts": 0,
+			"online": 1,
+			"uptime": 73,
+			"download": 0.1,
+			"upload": 0.278,
+			"lasterror": "2022-07-14T23:02:01.689Z admin - Error: View \"cmsundefined\" not found.\n    at ControllerProto.$viewrender (/home/louisbertson/projects/louisbertson/node_modules/total4/index.js:15093:9)\n    at ControllerProto.view (/home/louisbertson/projects/louisbertson/node_modules/total4/index.js:15058:14)\n    at Controller.preview (/home/louisbertson/projects/louisbertson/plugins/pages/index.js:79:7)\n    at IncomingMessage.PROTO.$total_execute2 (/home/louisbertson/projects/louisbertson/node_modules/total4/index.js:17107:31)\n    at IncomingMessage.PROTO.$total_execute (/home/louisbertson/projects/louisbertson/node_modules/total4/index.js:17072:9)\n    at IncomingMessage.PROTO.$total_prepare (/home/louisbertson/projects/louisbertson/node_modules/total4/index.js:17395:9)\n    at IncomingMessage.PROTO.$total_end2 (/home/louisbertson/projects/louisbertson/node_modules/total4/index.js:17311:8)\n    at IncomingMessage.emit (events.js:412:35)\n    at endReadableNT (internal/streams/readable.js:1334:12)\n    at processTicksAndRejections (internal/process/task_queues.js:82:21)"
+		}
+	]
+}

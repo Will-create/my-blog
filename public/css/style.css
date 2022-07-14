@@ -35,7 +35,25 @@ body{
         opacity: 1;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
-       
+
+    }
+  .section2{
+        background-color: #f2f2fc;
+        min-height: 100vh;
+        display: block;
+        padding: 0 10px;
+        position: relative;
+        left: 270px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        opacity: 1;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+
     }
     .section.back-section{
         z-index: 1;
@@ -44,7 +62,7 @@ body{
         opacity: 1;
         z-index: 2;
         -webkit-animation: slideSection 1s ease;
-        animation: slideSection 1s ease;  
+        animation: slideSection 1s ease;
     }
     @-webkit-keyframes slideSection{
         0%{
@@ -115,7 +133,7 @@ body{
         /* margin-right: -15px;
         margin-left: -15px; */
         position: relative;
-       
+
 
     }
     .padd-15{
@@ -125,13 +143,13 @@ body{
     /* .main-content{
         padding-left: 270px;
     } */
-  
+
     .container{
         max-width: 1100px;
         width: 100%;
         margin: auto;
         /* background-color: red; */
-      
+
     }
     .shadow-dark{
         -webkit-box-shadow: 0 0 20px rgba(48,46,77,0.15);
@@ -209,13 +227,14 @@ body{
 
 /* Aside */
 .aside{
-    width: 270px;  
+    width: 270px;
     background-color: #fdf9ff;
     position: fixed;
     height: 100%;
     left: 0;
     top: 0;
     z-index: 11;
+	overflow : auto;
     border-right: 1px solid #e8dfec;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -228,6 +247,7 @@ body{
     width: 100%;
     height: 100%;
     padding: 30px;
+	overflow : auto;
 }
 .aside .logo{
 
@@ -243,7 +263,7 @@ padding: 30px 0;
     position: relative;
     padding: 0 10px;
     line-height: 50px;
- 
+
 }
 .aside .logo a::before{
     content: '';
@@ -342,7 +362,7 @@ position: relative;
 }
 .aside .nav li a .fa{
     margin-right: 5px;
- 
+
 }
 .aside .copyright-text{
    font-size: 13px;
@@ -408,7 +428,7 @@ position: relative;
     flex: 0 0 100%;
     max-width: 100%;
     min-height: 600px;
-  
+
 }
 .about .about-container .about-text{
     /* background-color: blue; */
@@ -428,7 +448,7 @@ position: relative;
     line-height: 25px;
     color: #504e70;
     margin: 0;
-    
+
 }
 .about .about-container .personal-info{
     /* background-color: red; */
@@ -496,7 +516,7 @@ position: relative;
     border-radius: 4px;
     width: 100%;
     position: relative;
-   
+
 }
 .about .about-container .skils .skill-item{
     margin-bottom: 30px;
@@ -521,7 +541,7 @@ position: relative;
     flex: 0 0 50%;
     max-width: 50%;
     margin-top: 40px;
- 
+
 }
 .about .about-container .experience{
     -ms-flex: 0 0 50%;
@@ -615,8 +635,8 @@ display: flex; */
  .service .service-item .service-item-inner{
 background-color: #fdf9ff;
 border: 1px solid #d4d4e3;
-border-radius: 10px; 
-padding: 30px 15px; 
+border-radius: 10px;
+padding: 30px 15px;
 text-align: center;
 -webkit-transition: all 0.3s ease;
 transition: all 0.3s ease;
@@ -741,7 +761,7 @@ position: relative;
 .protfolio  .portfolio-item-inner .portfolio-img img{
     width: 100%;
     height: auto;
-    display: block;    
+    display: block;
 }
 .protfolio .portfolio-item .portfolio-info{
   position: absolute;
@@ -799,7 +819,7 @@ position: relative;
 }
 .protfolio .portfolio-item .portfolio-info .fa{
     line-height: 40px;
-    
+
 }
 /* lightbox */
 .lightbox{
@@ -906,7 +926,7 @@ z-index: -1;
     margin-top: -20px;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    
+
 }
 .lightbox .lightbox-controls .prev-item:hover,
 .lightbox .lightbox-controls .next-item:hover{
@@ -944,7 +964,7 @@ z-index: -1;
 }
 .blog .blog-item .blog-item-inner{
     border-radius: 30px;
-  
+
 }
 .blog .blog-item .blog-item-inner .blog-img{
     position: relative;
@@ -1102,7 +1122,7 @@ body.dark .about .about-container .personal-info .info-item p,
 body.dark .home .intro h1,
 body.dark .aside .logo a,
 body.dark .aside .nav li a{
-  color: #ffffff;  
+  color: #ffffff;
 }
 body.dark  .contact .contact-form .form-item .form-control,
 body.dark .contact .contact-info-item p,
@@ -1133,7 +1153,7 @@ body.dark .shadow-dark{
     .section .container{
         padding-top: 70px;
     }
-    
+
     .aside .nav-toggler{
         display: -ms-flexbox;
         display: flex;
@@ -1157,7 +1177,7 @@ body.dark .shadow-dark{
     .section.open{
         left: 270px;
     }
-    .about .about-container .personal-info .info-item p span {       
+    .about .about-container .personal-info .info-item p span {
         display: block;
         margin-left: 0px;
     }
@@ -1186,7 +1206,7 @@ body.dark .shadow-dark{
     .protfolio .protfolio-filter button{
         margin-bottom: 10px;
     }
-   
+
 }
 @media (max-width: 575px){
     .contact .contact-info-item,

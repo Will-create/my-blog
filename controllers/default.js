@@ -1,24 +1,21 @@
 exports.install =function(){
 
+    ROUTE('GET /', home);
+    ROUTE('GET /services', services);
+    ROUTE('GET /about', about);
+    ROUTE('GET /contact', contact);
+    ROUTE('GET /portfolio', portfolio);
+    ROUTE('GET /blog', blog);
+    ROUTE('GET /blog/{id}/', readpost);
+    ROUTE('GET /references', references);
 	CORS();
-    ROUTE('/', home);
-    ROUTE('/services', services);
-    ROUTE('/about', about);
-    ROUTE('/contact', contact);
-    ROUTE('/portfolio', portfolio);
-    ROUTE('/blog', blog);
-    ROUTE('/blog/{id}/', read_post);
-    ROUTE('/references', references);
+
 }
-
-
-function home(){
+function blog(){
     var self = this;
-    NOSQL('socials').find().callback(function(err,res){
-
-
-        self.view('index',{socials : res || []});
-    })
+	NOSQL('posts').find().callback(function (err,res){
+		self.view('pages/blog',{articles : res});
+	})
 }
 
 function services(){
@@ -46,11 +43,11 @@ function portfolio(){
     self.view('pages/portfolio');
 }
 
-function blog(){
+function home(){
     var self = this;
-	NOSQL('posts').find().callback(function (err,res){
-		self.view('pages/blog',{articles : res});
-	})
+	    NOSQL('socials').find().callback(function(err,res){
+        self.view('index',{socials : res || []});
+    });
 
 }
 
@@ -60,13 +57,10 @@ function references(){
     self.view('pages/references');
 }
 
-function read_post(){
+function readpost(){
 	var self = this;
 	//var id = self.params.id;
+	 var message = '@(404: Page not found)';
 
-
-		self.view('/pages/page404',{message : '@(404: Page not found)'});
-
-
-
+		self.view('/pages/errorpage',{message});
 }

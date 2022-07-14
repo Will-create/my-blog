@@ -9,8 +9,8 @@
 	<meta name="format-detection" content="telephone=no" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<meta name="robots" content="all,follow" />
-	<link rel="stylesheet" href="/css/spa.min@18.css" />
-	<script src="/js/spa.min@18.js"></script>
+	<link rel="stylesheet" href="@{'%cdn'}/spa.min@18@{if CONF.proicons}pro@{fi}.css" />
+	<script src="@{'%cdn'}/spa.min@18.js"></script>
 	<script>ENVIRONMENT('cms');</script>
 	@{import('head', 'admin-ui.css + admin.css + codemirror.min.css', 'admin-ui.js + admin.js + codemirror.min.js', 'favicon.ico')}
 </head>
@@ -94,7 +94,7 @@
 	<div data---="importer__common.top__if:markdownhelp;url:/_notices/help.html"></div>
 
 	<script>
-		//DEF.fallback = "./cdn2/j-{0}.html";
+
 		var user = PARSE($('#userprofile').html());
 		var filebrowser = {};
 
@@ -224,14 +224,12 @@
 				case 'navigation.save':
 					msg = t.format('@(Navigation has been saved)', item.message);
 					break;
-
 				case 'navigations/edit':
 				case 'pages/edit':
 				case 'posts/edit':
 				case 'newsletters/edit':
 				case 'notices/edit':
 				case 'widgets/edit':
-
 					if (user.name !== item.user) {
 
 						var tmp = item.type.substring(0, item.type.indexOf('/'));

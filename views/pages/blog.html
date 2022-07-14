@@ -1,10 +1,13 @@
+
 <section class="blog section" id="blog">
+
     <div class="container">
     <div class="row">
     <div class="section-title padd-15">
          <h2>Latest Blog</h2>
     </div>
     </div>
+
     <div class="row">
         <!-- Blog Item -->
 
@@ -21,8 +24,8 @@
                   <h4 onclick="read_post('@{doc.id}')" class="blog-title">@{if cookie('_lang') == 'fr'} @{doc.title_fr} @{else} @{doc.title} @{fi}</h4>
                   <p onclick="read_post('@{doc.id}')" class="blog-description">@{if cookie('_lang') == 'fr'} @{doc.summary_fr} @{else} @{doc.summary} @{fi}
                   </p>
-                  <p class="blog-tags">Tags : 
-                      @{if cookie('_lang') == 'fr'} 
+                  <p class="blog-tags">Tags :
+                      @{if cookie('_lang') == 'fr'}
                       @{foreach tag in doc.tags_fr}
                       <a  href="/blog?tag=@{tag}">@{tag}</a>
                       @{end}

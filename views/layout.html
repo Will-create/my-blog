@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html>
     <head>
-        <title>Louis Bertson Nabaloum</title>
         <meta name="description"
         content="Louis Bertson Nabaloum is a self-taught Software Developper, Pianist, Bass Guitarist and Song Writer from Burkina Faso / West Africa">
     <meta name="keywords"
@@ -19,21 +18,29 @@
 	<script src="/js/spa.min@18.js"></script>
 
         <meta name="viewport" content="width=device-width, initail-scale=1">
-        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+        <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/css/style.css" type="text/css">
 	    <script src="/js/spa.min@18.js"></script>
      <!-- <link rel="stylesheet" href="css/links/pink.css" type="text/css"> -->
      <!-- Live Style Switcher - Demo Only -->
-     <link rel="stylesheet" class="alternate-style" title="green" href="css/links/green.css" type="text/css" >
-     <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css"> 
+     <link rel="stylesheet" class="alternate-style" title="green" href="/css/links/green.css" type="text/css" >
+     <link rel="stylesheet" href="css/styleSwitcher.css" type="text/css">
 
-
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TCREEVDBM0"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-TCREEVDBM0');
+		</script>
+		@{import('meta', 'head', 'favicon.ico')}
     </head>
     <body class="dark">
         <!-- Preload -->
         <div class="preloader">
-            <div class="loader">      
+            <div class="loader">
             </div>
         </div>
         <!-- Preload End-->
@@ -57,28 +64,24 @@
                             <li> <a href="/about"> <i class="fa fa-user"></i> @(About) </a></li>
                             <li> <a href="/services"> <i class="fa fa-list"></i> @(Service) </a></li>
                             <li> <a href="/references"> <i class="fa fa-heart"></i> @(References) </a></li>
-                            <li> <a href="/portfolio"> <i class="fa fa-briefcase"></i>@(Portfolio) </a></li>
-                            <li> <a href="/blog"> <i class="fa fa-envelope"></i> @(Blog) </a></li>
+                            <li> <a href="/portfolio"> <i class="fa fa-briefcase"></i>@(Experiences) </a></li>
+                            <li> <a href="/blog"> <i class="fa fa-blog"></i> @(Blog) </a></li>
                             <li> <a href="/contact"> <i class="fa fa-comments"></i> @(Contact) </a></li>
                             </ul>
-
                             <!--copyright-->
                             <div class="copyright-text">
                                 @(All rights reserved) &copy; @{NOW.getFullYear()}
-                                
+
                             </div>
                     </div>
             </div>
 
         </div>
             <div class=" main-content">
-        
+
                 @{body}
 
             </div>
-           
-
-
         </div>
         <!--main container-->
         <!-- lightbox -->
@@ -101,15 +104,15 @@
         </div>
         <!-- lightbox End -->
         <!-- Live Style Swicher - Demo Only -->
-       
+
      <script>
         window.addEventListener("load",function(){
             document.querySelector(".preloader").classList.add("opacity-0");
-            
+
             setTimeout(() =>{
-                document.querySelector(".preloader").style.display="none";     
+                document.querySelector(".preloader").style.display="none";
             },1000)
-        
+
         });
 
             // Sside Navbar
@@ -118,14 +121,14 @@
         totalnavlist=navlist.length,
         allsection=document.querySelectorAll(".section")
         totalsection=allsection.length;
-  
+
     function addbacksection(num){
         allsection[num].classList.add("back-section");
         }
     function removebacksection(){
     for(let i=0;i<totalsection;i++){
         allsection[i].classList.remove("back-section");
-                                    } 
+                                    }
                             }
     function showsection(element){
     // remove class active from all section
@@ -134,7 +137,7 @@
                                         }
             const href= element.getAttribute("href").split("#");
             target=href[1];
-            document.querySelector("#"+target).classList.add("active");           
+            document.querySelector("#"+target).classList.add("active");
                             }
     // updateNav
     function updateNav(element){
@@ -149,15 +152,15 @@
 
     // nav-toggler
     const navtogglerBtn=document.querySelector(".nav-toggler"),
-    aside=document.querySelector(".aside"); 
-    navtogglerBtn.addEventListener("click",asideSectionTogglerBtn) 
+    aside=document.querySelector(".aside");
+    navtogglerBtn.addEventListener("click",asideSectionTogglerBtn)
     function  asideSectionTogglerBtn(){
     aside.classList.toggle("open");
     navtogglerBtn.classList.toggle("open");
     for(let i=0;i<totalsection;i++){
         allsection[i].classList.toggle("open");
     }
-    }   
+    }
 
     function set_lang(lang){
         let current = window.location.href.substring(window.location.origin.length,window.location.href.length).split('?')[0];
@@ -179,15 +182,15 @@
         return (Date.now() + 60000 * new Date().getTimezoneOffset() + 21600000) % 86400000 / 3600000 > 12;
     }
 
-    if(isDay){
+    if(!isDay){
         document.querySelector('body').className = "";
     }else{
         document.querySelector('body').className = "dark";
     }
 
      </script>
-  
+	<script src="https://cdn.componentator.com/visitors.min@1.js" async defer></script>
     </body>
-     
+
 
 </html>
